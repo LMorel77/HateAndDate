@@ -48,7 +48,7 @@ module.exports = function (sequelize, DataTypes) {
   // Associating User with Post Model
   User.associate = function (models) {
 
-    User.hasMany(models.Post, { onDelete: "CASCADE" });
+    User.hasMany(models.Post, { onDelete: "CASCADE", hooks: true });
 
   };
 
